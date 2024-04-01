@@ -1,0 +1,1 @@
+export const TEN_MEGABYTES_IN_BYTES = 10000000;
