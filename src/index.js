@@ -1,7 +1,5 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import cors from 'cors';
 
 import logger from './logger.js';
@@ -10,11 +8,6 @@ import createController from './controller.js';
 import createValidator from './validator.js';
 import createRouter from './router.js';
 import createDataBase from './db/index.js';
-
-global.__filename = fileURLToPath(import.meta.url);
-global.__dirname = path.dirname(__filename);
-
-global.eventsClients = new Map();
 
 const server = express();
 

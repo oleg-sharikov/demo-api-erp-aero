@@ -201,7 +201,7 @@ export default async function createController({ dbMethods, sequelize }) {
 
   async function listFiles(req, res) {
     try {
-      let page = req.query.page || 1;
+      const page = req.query.page || 1;
 
       const filesData = await dbMethods.file.find({
         offset: (page - 1) * req.query.listSize,
